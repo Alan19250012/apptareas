@@ -1,0 +1,25 @@
+{
+  "name": "habitat-habit-tracker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Hábitat — Rastreador visual de hábitos (PWA + APK Android) con calendario, agenda, rachas, estadísticas y panel de progreso, más plantilla para Excel/Google Sheets.",
+  "type": "module",
+  "scripts": {
+    "serve": "python -m http.server 8123 --directory app",
+    "sheet": "node sheets/generate_sheet.mjs",
+    "icons": "python tools/generate_icons.py",
+    "android-icons": "python tools/generate_android_icons.py",
+    "smoke": "node tools/smoke_test.mjs",
+    "cap:sync": "cap sync android",
+    "apk": "cd android && gradlew assembleDebug",
+    "apk:release": "cd android && gradlew assembleRelease"
+  },
+  "devDependencies": {
+    "exceljs": "^4.4.0"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.5.3",
+    "@capacitor/cli": "^8.5.3",
+    "@capacitor/core": "^8.5.3"
+  }
+}

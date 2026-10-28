@@ -1,0 +1,19 @@
+# Dependencias y artefactos
+node_modules/
+
+# APK compilado (se regenera con `npm run apk`)
+/*.apk
+/*.aab
+
+# Logs
+*.log
+npm-debug.log*
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
